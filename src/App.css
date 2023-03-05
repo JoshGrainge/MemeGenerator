@@ -64,8 +64,14 @@
   margin-right: auto;
 }
 
-.logo{
+.logo {
   height: 60%;
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.41, 1.15, 1, 1);
+}
+
+.logo:hover{
+  height: 80%;
 }
 
 .meme-form{
