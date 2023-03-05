@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.header{
+  display: flex;
+  height: 75px;
+  padding: 20px 40px;
+
+  background: linear-gradient(90deg, #6f0591, #b059cb);
+  color: white;
+}
+
+.header > p{
+  align-self: center;
+}
+
+.logo-container{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo{
+  height: 60%;
+}
