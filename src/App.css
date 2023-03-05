@@ -105,3 +105,9 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.meme-image{
+  margin-top: 20px;
+  width: 100%;
+  flex: auto;
+}
