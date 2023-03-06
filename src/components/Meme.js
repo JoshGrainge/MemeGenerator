@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import memeData from '../memeData';
+import React, { useState, useEffect } from 'react';
 
 export default function Meme(props) {
-  const [allMemeImages, setAllMemeImages] = useState(memeData.data.memes);
+  const [allMemeImages, setAllMemeImages] = useState();
 
   const [meme, setMeme] = useState({
     topText: 'One does not simply',
     bottomText: 'Walk into Mordor',
     randomImage: 'http://i.imgflip.com/1bij.jpg',
   });
+
+  useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes').then((res) =>
+      res.json().then((result) => setAllMemeImages(result.data.memes))
+    );
+  }, []);
 
   const getRandomMemeUrl = () => {
     const randomIndex = Math.floor(Math.random() * allMemeImages.length);
