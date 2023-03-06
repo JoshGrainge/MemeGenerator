@@ -10,9 +10,13 @@ export default function Meme(props) {
   });
 
   useEffect(() => {
-    fetch('https://api.imgflip.com/get_memes').then((res) =>
-      res.json().then((result) => setAllMemeImages(result.data.memes))
-    );
+    async function getMemes() {
+      const response = await fetch('https://api.imgflip.com/get_memes');
+      const data = await response.json();
+      setAllMemeImages(data.data.memes);
+    }
+
+    getMemes();
   }, []);
 
   const getRandomMemeUrl = () => {
