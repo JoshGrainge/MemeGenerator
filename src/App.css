@@ -106,8 +106,32 @@
   cursor: pointer;
 }
 
+.meme{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .meme-image{
   margin-top: 20px;
   width: 100%;
   flex: auto;
+}
+
+.top-text,
+.bottom-text{
+  position: absolute;
+  font-size: 150px;
+  color: white;
+  font-weight: bold;
+}
+
+.top-text{
+  top: 20px;
+}
+
+.bottom-text{
+  bottom: 20px;
 }
